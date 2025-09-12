@@ -11,7 +11,7 @@ import knjiga7 from "../assets/knjige/zivotinjska_farma-dzordz_orvel_v.jpg";
 
 const knjige = [knjiga1, knjiga2, knjiga3, knjiga4, knjiga5, knjiga6, knjiga7];
 
-function PopularneKnjige() {
+function PopularneKnjige({naslov}) {
   const [startIndex, setStartIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(5); // default za velike ekrane
   const total = knjige.length;
@@ -41,7 +41,7 @@ function PopularneKnjige() {
 
   return (
     <div className="main-container">
-      <h1 className="popularni-naslov">Popularne knjige</h1>
+      <h1 className="popularni-naslov">{naslov}</h1>
 
       <div className="carousel-wrapper">
         <button onClick={prev} className="carousel-btn left">&#10094;</button>

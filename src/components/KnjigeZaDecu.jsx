@@ -13,7 +13,7 @@ import knjiga10 from "../assets/decijeKnjige/405046_350_350px.jpg";
 
 const knjige = [knjiga1, knjiga2, knjiga3, knjiga4, knjiga5, knjiga6, knjiga7, knjiga8, knjiga9, knjiga10];
 
-function KnjigeZaDecu() {
+function KnjigeZaDecu({naslov}) {
   const [startIndex, setStartIndex] = useState(0);
     const [visibleCount, setVisibleCount] = useState(5); // default za velike ekrane
     const total = knjige.length;
@@ -42,13 +42,13 @@ function KnjigeZaDecu() {
     }
   
     return (
-      <div className="main-container">
-        <h1 className="popularni-naslov">Popularne knjige</h1>
+      <div className="main-container-decije">
+        <h1 className="decije-naslov">{naslov}</h1>
   
-        <div className="carousel-wrapper">
+        <div className="carousel-wrapper-decije">
           <button onClick={prev} className="carousel-btn left">&#10094;</button>
   
-          <div className="carousel-inner" style={{ width: `${visibleCount * 220}px` }}>
+          <div className="carousel-inner-decije" style={{ width: `${visibleCount * 220}px` }}>
             {visibleKnjige.map((knjiga, index) => (
               <img
                 key={index}
@@ -59,7 +59,7 @@ function KnjigeZaDecu() {
             ))}
           </div>
   
-          <button onClick={next} className="carousel-btn right">&#10095;</button>
+          <button onClick={next} className="carousel-btn-decije right">&#10095;</button>
         </div>
       </div>
     );

@@ -15,9 +15,9 @@ function App() {
     
       <div>
         <Header/>
-        <PopularneKnjige/>
+        <PopularneKnjige naslov="Popularne knjige"/>
         <Add/>
-        <KnjigeZaDecu/>
+        <KnjigeZaDecu naslov="Knjige za decu"/>
         <Heading/>
         <Add/>
         <Pribor/>
