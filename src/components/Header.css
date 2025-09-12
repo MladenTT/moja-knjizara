@@ -1,8 +1,8 @@
-/* Top bar iznad headera */
+/* Top bar */
 .top-bar {
   width: 100%;
   height: 30px;
-  background-color: #000; /* narandžasta */
+  background-color: #000;
   color: white;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -14,17 +14,12 @@
   z-index: 1050;
 }
 
+/* Icon color */
 .icon-color {
-    color: #000;
+  color: #000;
 }
 
-/* Pomeri header kada je top bar vidljiv */
-header.main-header.with-top-bar {
-  top: 30px; /* visina top bara */
-  transition: top 0.3s ease;
-}
-
-/* Header kad top bar nestane */
+/* Header */
 header.main-header {
   position: fixed;
   top: 0;
@@ -34,39 +29,41 @@ header.main-header {
   justify-content: space-between;
   align-items: center;
   background-color: #fcb800;
-  padding: 16px 200px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 16px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   z-index: 1040;
   transition: top 0.3s ease;
 }
 
-/* Linkovi */
+header.main-header.with-top-bar {
+  top: 30px;
+}
+
+/* Nav links */
 .navbar-link {
   color: black;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-.navbar-link:hover,
-.navbar-link:focus,
-.navbar-link.active {
+.navbar-link:hover {
   color: gray;
 }
 
-/* Hamburger dugme */
+/* Hamburger */
 .navbar-toggler {
   display: none;
-  background-color: transparent;
+  background: transparent;
   border: none;
   cursor: pointer;
 }
 
 .navbar-toggler-icon {
-  display: block;
   width: 25px;
   height: 3px;
   background-color: black;
+  display: block;
   position: relative;
 }
 
@@ -80,20 +77,30 @@ header.main-header {
   left: 0;
 }
 
-.navbar-toggler-icon::before {
-  top: -8px;
-}
+.navbar-toggler-icon::before { top: -8px; }
+.navbar-toggler-icon::after { top: 8px; }
 
-.navbar-toggler-icon::after {
-  top: 8px;
-}
-
-/* Collapse menija za male ekrane */
+/* Nav links container */
 .nav-links {
   display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-@media (max-width: 992px) {
+/* Search form */
+.search-form input {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Avatar */
+.avatar img {
+  border-radius: 50%;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
   .navbar-toggler {
     display: block;
   }
@@ -106,6 +113,7 @@ header.main-header {
     position: absolute;
     top: 100%;
     left: 0;
+    padding: 10px 0;
     z-index: 1040;
   }
 
@@ -115,11 +123,25 @@ header.main-header {
 
   .nav-links ul {
     flex-direction: column;
-    padding: 10px 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-links ul li {
-    margin: 0;
     text-align: center;
+    margin: 5px 0;
+  }
+
+  .search-form {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
   }
 }

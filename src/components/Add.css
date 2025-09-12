@@ -1,5 +1,34 @@
 .reklama1 {
-    text-align: center;
+    text-align: center; /* centriranje inline elemenata */
     margin-top: 50px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center; /* centriranje img unutar flex */
+}
+
+.reklama1 img {
+    max-width: 100%;  /* da slika ne prelazi širinu kontejnera */
+    height: auto;     /* proporcionalno skaliranje */
+    display: block;   /* uklanja inline space oko slike */
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .reklama1 img.horizontal {
+        display: none;
+    }
+    .reklama1 img.vertical {
+        display: block;
+        max-height: 80vh; /* da stane u ekran, po potrebi */
+    }
+}
+
+/* Desktop */
+@media (min-width: 577px) {
+    .reklama1 img.vertical {
+        display: none;
+    }
+    .reklama1 img.horizontal {
+        display: block;
+    }
 }
