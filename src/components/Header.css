@@ -1,0 +1,125 @@
+/* Top bar iznad headera */
+.top-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #000; /* narandžasta */
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+}
+
+.icon-color {
+    color: #000;
+}
+
+/* Pomeri header kada je top bar vidljiv */
+header.main-header.with-top-bar {
+  top: 30px; /* visina top bara */
+  transition: top 0.3s ease;
+}
+
+/* Header kad top bar nestane */
+header.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcb800;
+  padding: 16px 200px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  z-index: 1040;
+  transition: top 0.3s ease;
+}
+
+/* Linkovi */
+.navbar-link {
+  color: black;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.navbar-link:hover,
+.navbar-link:focus,
+.navbar-link.active {
+  color: gray;
+}
+
+/* Hamburger dugme */
+.navbar-toggler {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* Collapse menija za male ekrane */
+.nav-links {
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fcb800;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1040;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav-links ul li {
+    margin: 0;
+    text-align: center;
+  }
+}

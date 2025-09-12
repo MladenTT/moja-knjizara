@@ -1,0 +1,37 @@
+.main-container {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.popularni-naslov {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  color: #000;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.carousel-img {
+  width: 200px;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
