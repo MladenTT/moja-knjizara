@@ -1,15 +1,24 @@
 import React from "react";
 import "./Add.css";
-import reklamaH from "../assets/reklame/Kapetan-Gacerone-1400x300px.jpg";
-import reklamaV from "../assets/reklame/Kapetan-Gacerone-800x900px.jpg";
 
 function Add() {
-    return (
-        <div className="reklama1">
-            <img className="horizontal" src={reklamaH} alt="Horizontalna" />
-            <img className="vertical" src={reklamaV} alt="Vertikalna" />
-        </div>
-    )
+  return (
+    <div className="reklama1">
+      {/* Horizontalna slika za desktop */}
+      <img
+        className="horizontal"
+        src={process.env.PUBLIC_URL + "/slike/reklame/Kapetan-Gacerone-1400x300px.jpg"}
+        alt="Horizontalna reklama"
+      />
+
+      {/* Vertikalna slika za mobilni */}
+      <img
+        className="vertical"
+        src={process.env.PUBLIC_URL + "/slike/reklame/Kapetan-Gacerone-800x900px.jpg"}
+        alt="Vertikalna reklama"
+      />
+    </div>
+  );
 }
 
 export default Add;

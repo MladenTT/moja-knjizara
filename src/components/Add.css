@@ -1,9 +1,8 @@
 .reklama1 {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  margin: 50px 0;
+  text-align: center;
 }
 
 .reklama1 img {
@@ -12,26 +11,23 @@
   display: block;
 }
 
-/* Mobile */
-@media (max-width: 576px) {
-  .reklama1 {
-    flex-direction: column;
-  }
+/* Desktop: horizontalna slika se prikazuje, vertikalna se skriva */
+@media (min-width: 577px) {
   .reklama1 img.horizontal {
-    display: none;
+    display: block;
   }
   .reklama1 img.vertical {
-    display: block;
-    max-height: 80vh;
+    display: none;
   }
 }
 
-/* Desktop */
-@media (min-width: 577px) {
-  .reklama1 img.vertical {
+/* Mobile: vertikalna slika se prikazuje, horizontalna se skriva */
+@media (max-width: 576px) {
+  .reklama1 img.horizontal {
     display: none;
   }
-  .reklama1 img.horizontal {
+  .reklama1 img.vertical {
     display: block;
+    max-height: 80vh; /* da stane u ekran */
   }
 }
