@@ -14,6 +14,9 @@
 
 /* Mobile */
 @media (max-width: 576px) {
+  .reklama1 {
+    flex-direction: column;
+  }
   .reklama1 img.horizontal {
     display: none;
   }
