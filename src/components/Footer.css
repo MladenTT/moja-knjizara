@@ -1,5 +1,33 @@
 .footter-container {
-    width: 100%;
-    background-color: #fcb800;
-    width: 100%;
+  width: 100%;
+  background-color: #fcb800;
+}
+
+/* Desktop (default bootstrap raspored) */
+.footer-list {
+  display: block;
+}
+
+/* Na manjim ekranima */
+@media (max-width: 768px) {
+  .footer-section {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  .footer-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-list {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .footer-list.open {
+    display: block;
+  }
 }

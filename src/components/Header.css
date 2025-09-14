@@ -13,6 +13,18 @@
   left: 0;
   z-index: 1050;
 }
+.top-bar-naslov {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+
+  }
+  .top-bar-naslov {
+    font-size: small;
+  }
+}
 
 /* Icon color */
 .icon-color {

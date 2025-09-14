@@ -3,5 +3,15 @@
     padding-right: 200px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: white;
+    background-color: white
+}
+
+/* Za manje ekrane */
+@media (max-width: 768px) {
+    .heading-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }

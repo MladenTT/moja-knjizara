@@ -1,7 +1,7 @@
 import React from "react";
 import "./Add.css";
-import reklamaH from "../assets/reklame/Kapetan-Gacerone-1400x300px.jpg";
-import reklamaV from "../assets/reklame/Kapetan-Gacerone-800x900px.jpg";
+import reklamaH from "../assets/reklame/Kapetan-Gacerone-1400x300px-v2.jpg";
+import reklamaV from "../assets/reklame/Kapetan-Gacerone-800x900px-v2.jpg";
 
 function Add() {
   return (

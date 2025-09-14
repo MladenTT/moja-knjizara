@@ -14,18 +14,17 @@ function App() {
   return (
     
       <div>
-        <Header/>
-        <PopularneKnjige naslov="Popularne knjige"/>
-        <Heading/>
-        <Add/>
-        <KnjigeZaDecu naslov="Knjige za decu"/>
-        
-        <Add/>
-        <Pribor/>
-        <Footer/>
+        <div className="my-texture"></div>
+          <Header/>
+          <PopularneKnjige naslov="Popularne knjige"/>
+          <Heading/>
+          <Add/>
+          <KnjigeZaDecu naslov="Knjige za decu"/>
+          
+          <Add/>
+          <Pribor/>
+          <Footer/>
       </div>
-      
-    
   )
 }
 

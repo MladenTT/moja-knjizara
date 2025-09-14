@@ -19,7 +19,7 @@ function Header() {
       {/* Top bar */}
       {showTopBar && (
         <div className="top-bar">
-          Besplatna dostava za porudzbine preko 3000 dinara
+          <p className="top-bar-naslov">Besplatna dostava za porudzbine preko 3000 dinara</p>
         </div>
       )}
 
