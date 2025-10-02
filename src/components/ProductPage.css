@@ -1,0 +1,57 @@
+.product-container {
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+    border-radius: 8px; /* za zaobljene ivice */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* blaga senka */
+    
+}
+
+.page-tools {
+    background-color: #ffc107;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center; /* OVO dodaje vertikalno centriranje */
+    height: 60px; /* stavi visinu da se vidi efekat */
+    padding-right: 30px;
+    border-radius: 8px; /* za zaobljene ivice */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* blaga senka */
+}
+
+.sortiranje {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center; /* centrira <p> i <select> međusobno */
+}
+
+.sortiranje p{
+    margin: 0;
+}
+
+.page-tools-list {
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* default - 1 kartica po redu */
+    gap: 20px; /* razmak između kartica */
+}
+
+/* srednji ekrani (tableti npr.) */
+@media (min-width: 768px) {
+    .page-tools-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* veliki ekrani */
+@media (min-width: 1200px) {
+    .page-tools-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/*filter za mobilni*/
+

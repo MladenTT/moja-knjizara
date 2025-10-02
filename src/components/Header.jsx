@@ -54,10 +54,28 @@ function Header() {
           {/* Navigacija + search + avatar */}
           <div className={`nav-links ${isMenuOpen ? "show" : ""}`}>
             <ul className="nav">
-              <li><a href="#" className="nav-link navbar-link">Overview</a></li>
-              <li><a href="#" className="nav-link navbar-link">Inventory</a></li>
-              <li><a href="#" className="nav-link navbar-link">Customers</a></li>
-              <li><a href="#" className="nav-link navbar-link">Products</a></li>
+              <li><a href="#" className="nav-link navbar-link">Pocetna</a></li>
+              <li>
+                <div className="dropdown">
+                  <button className="btn dropdown-toggle navbar-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Kategorije
+                  </button>
+                  <ul className="dropdown-menu dropdown-menu-dark">
+                    <li><a className="dropdown-item" href="#">Domaci autori</a></li>
+                    <li><a className="dropdown-item" href="#">Ljubavni</a></li>
+                    <li><a className="dropdown-item" href="#">Trieri</a></li>
+                    <li><a className="dropdown-item" href="#">Udzbenici i prirucici</a></li>
+                    <li><a className="dropdown-item" href="#">Biografije</a></li>
+                    <li><a className="dropdown-item" href="#">Za decu</a></li>
+                    <li><a className="dropdown-item" href="#">Skolski pribor</a></li>
+                    <li><a className="dropdown-item" href="#">Za kancelariju</a></li>
+                    <li><a className="dropdown-item" href="#">Figurice</a></li>
+                    <li><a className="dropdown-item" href="#">Privesci</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#" className="nav-link navbar-link">TOP autori</a></li>
+              <li><a href="#" className="nav-link navbar-link">Kontakt</a></li>
             </ul>
             <form className="search-form" role="search">
               <input type="search" placeholder="Search..." aria-label="Search"/>

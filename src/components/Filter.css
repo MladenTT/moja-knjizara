@@ -1,0 +1,83 @@
+.filter-conteiner {
+    width: 350px;               /* fiksna širina */
+    max-width: 100%;            /* da ne probija roditelja na malim ekranima */
+    background-color: white;
+    padding: 15px;
+    color: #6d6e71;
+    border-radius: 8px;         
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-right: 10px;
+    box-sizing: border-box;     /* uključuje padding u širinu */
+}
+
+
+
+h4 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.filter-conteiner ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-conteiner h6 {
+    color: black;
+    font-weight: 700;
+}
+
+#filter-container > * {
+    padding-top: 6px;
+}
+
+
+.filter-kategorija {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.filter-brend {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.filter-cena {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.filter-pismo {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.filter-povez {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.filter-pretraga {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.filter-reset {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* checkbox kada je čekiran */
+#checkDefault:checked {
+    background-color: orange; /* narandžasta pozadina */
+    border-color: orange;     /* opcionalno da ivica bude ista boja */
+}
+
+/* hover efekt (opciono) */
+#checkDefault:hover {
+    border-color: darkorange;
+}
+
+.form-check-input:focus {
+    outline: none; /* uklanja default plavi outline */
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.5); /* narandžasti fokus */
+    border-color: orange; /* opcionalno da i ivica bude narandžasta */
+}

@@ -20,7 +20,6 @@ function Heading() {
                 <img src={slika} alt="" aria-label="Placeholder: 500x500" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500" preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg"/>
                 
                 <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
             </div>
         </div>
     )

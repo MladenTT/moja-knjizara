@@ -1,30 +1,24 @@
 import './App.css'
-import Header from "./components/Header"
-import Navigation from "./components/Navigation";
-import PopularneKnjige from './components/PopularneKnjige';
-import Add from './components/Add';
-import KnjigeZaDecu from "./components/KnjigeZaDecu"
-import Pribor from "./components/Pribor.jsx"
-import Footer from "./components/Footer"
-import Heading from "./components/Heading"
-import Proba from './components/Proba.jsx';
+import Pocetna from "./pages/Pocetna"
+import Stranica from "./pages/Stranica"
+import Book from './pages/Book';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
 
   return (
     
-      <div>
-        <div className="my-texture"></div>
-          <Header/>
-          <PopularneKnjige naslov="Popularne knjige"/>
-          <Heading/>
-          <Add/>
-          <KnjigeZaDecu naslov="Knjige za decu"/>
-          
-          <Add/>
-          <Pribor/>
-          <Footer/>
-      </div>
+      <>
+        <BrowserRouter>  
+            <div className="my-texture"></div>
+            <Routes>
+              <Route path='/moja-knjizara/' element = { <Pocetna/> }></Route>
+              <Route path='/moja-knjizara/pocetna' element = { <Pocetna/> }></Route>
+              <Route path='/moja-knjizara/horor' element = { <Stranica/> }></Route>
+              <Route path='/moja-knjizara/book' element = { <Book/>}></Route>
+            </Routes>
+          </BrowserRouter>
+      </>
   )
 }
 

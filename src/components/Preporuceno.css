@@ -1,0 +1,60 @@
+.preporuceno-wraper {
+  display: inline-block; /* wrapper prati širinu sadržaja */
+  position: relative;   
+  text-align: center;   /* centriranje teksta i inline elemenata */
+  padding: 0;
+  cursor: pointer;
+  width: fit-content;   /* širina prati sadržaj */
+  margin: 0 auto;       /* centriraj ceo wrapper unutar roditelja */
+}
+
+
+.preporuceno-wraper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;                     /* pokriva ceo wrapper */
+  background-color: rgba(245, 245, 240, 0); /* inicijalno prozirno */
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+}
+
+
+.preporuceno-wraper:hover::after {
+  background-color: rgba(245, 245, 240, 0.3); /* sivkast overlay */
+}
+
+.preporuceno-slika,
+.preporuceno-naslov,
+.preporuceno-cena,
+.preporuceno-pisac {
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+
+
+.preporuceno-slika {
+  width: 100px;    /* širina slike */
+  height: auto;    /* proporcionalno */
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+.preporuceno-naslov {
+    font-weight: 600;
+    width: fit-content;   /* širina elementa prati sadržaj */
+}
+
+.preporuceno-cena {
+    color: red;
+    font-weight: 600;
+}
+
+.preporuceno-pisac {
+    color: gray;
+    font-size: small;
+}
