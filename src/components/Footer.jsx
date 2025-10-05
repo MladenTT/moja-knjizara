@@ -1,77 +1,138 @@
-import { useState } from "react";
 import "./Footer.css";
 
 function Footer() {
-  // Stanje za svaki od 5 menija
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleMenu = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const menus = [
-    {
-      title: "Features",
-      items: ["Cool stuff", "Random feature", "Team feature", "Stuff for developers", "Another one", "Last time"]
-    },
-    {
-      title: "Resources",
-      items: ["Resource name", "Resource", "Another resource", "Final resource"]
-    },
-    {
-      title: "Resources",
-      items: ["Business", "Education", "Government", "Gaming"]
-    },
-    {
-      title: "About",
-      items: ["Team", "Locations", "Privacy", "Terms"]
-    },
-    {
-      title: "Resources",
-      items: ["Resource name", "Resource", "Another resource", "Final resource"]
-    }
-  ];
-
+  
   return (
-    <div className="footter-container">
-      <footer className="container py-5">
-        <div className="row">
-          <div className="col-12 col-md-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24" height="24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="d-block mb-2"
-              role="img"
-              viewBox="0 0 24 24"
-            >
-              <title>Product</title>
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
-            </svg>
-            <small className="d-block mb-3 text-body-secondary">© 2017–2025</small>
+    
+    <div className="footer-container">
+      <div className="pc-container">
+        <footer className="container py-5">
+          <div className="container"> 
+            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"> 
+              <div className="col mb-3"> 
+                <a href="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-journals" viewBox="0 0 16 16">
+                    <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2"/>
+                    <path d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0"/>
+                  </svg>
+                </a>
+                <p className="text-body-secondary">© 2025</p> 
+              </div> 
+              <div className="col mb-3">
+              
+              </div> 
+              <div className="col mb-3">
+                <h5>Section</h5>
+                <ul className="nav flex-column">
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Home</a>
+                  </li>
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Features</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Pricing</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">FAQs</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">About</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="col mb-3">
+                <h5>Section</h5> 
+                <ul className="nav flex-column"> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Home</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Features</a>
+                  </li>
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Pricing</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">FAQs</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">About</a>
+                  </li> 
+                </ul> 
+              </div>
+
+              <div className="col mb-3"> 
+                <h5>Section</h5>
+                <ul className="nav flex-column">
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Home</a>
+                  </li>
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Features</a>
+                  </li>
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">Pricing</a>
+                  </li>
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">FAQs</a>
+                  </li> 
+                  <li className="nav-item mb-2">
+                    <a href="#" className="nav-link p-0 text-body-secondary">About</a>
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </footer>
+      </div>
+
+      {/*Footer Mobilna Verzija*/}
+      <div className="mobile-container">
+        <div className="accordion" id="accordionExample">
+
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Accordion Item #1
+              </button>
+            </h2>
+            <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
           </div>
 
-          {menus.map((menu, i) => (
-            <div key={i} className="col-12 col-md-2 footer-section">
-              <h5 onClick={() => toggleMenu(i)} className="footer-title">
-                {menu.title}
-              </h5>
-              <ul className={`list-unstyled text-small footer-list ${openIndex === i ? "open" : ""}`}>
-                {menu.items.map((item, j) => (
-                  <li key={j}>
-                    <a className="link-secondary text-decoration-none" href="#">{item}</a>
-                  </li>
-                ))}
-              </ul>
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+
         </div>
-      </footer>
+      </div>
     </div>
   );
 }

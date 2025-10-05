@@ -1,0 +1,15 @@
+.form-container {
+    background-color: white;
+    width: 700px;
+    margin: 150px auto 50px auto;             
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    padding: 30px;
+    color: #57564F;
+}
+
+.potvrda {
+    display: flex;
+    justify-content: end;
+}

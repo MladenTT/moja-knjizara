@@ -1,33 +1,78 @@
-.footter-container {
+.footer-container {
   width: 100%;
   background-color: #fcb800;
+  color: gray;
 }
 
-/* Desktop (default bootstrap raspored) */
-.footer-list {
+.footer-container a {
+  color: #44444E;
+}
+
+h5 {
+  color: black;
+}
+
+.footer-container a:hover {
+  color: black;
+  font-weight: 500;
+}
+
+/* Po defaultu desktop verzija je vidljiva, mobilna sakrivena */
+.pc-container {
   display: block;
 }
 
-/* Na manjim ekranima */
+.mobile-container {
+  display: none;
+  background-color: #fcb800;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.accordion {
+  background-color: #fcb800;
+}
+
+.accordion-item {
+  background-color: #fcb800;
+}
+
+/* osnovno stanje */
+.accordion-button {
+  background-color: #fcb800;   /* bela pozadina */
+  color: #000;              /* crni tekst */
+}
+
+/* kad je otvoren (ne collapsed) */
+.accordion-button:not(.collapsed) {
+  background-color: #ffd54d;
+  color: #000;
+  font-weight: 600;
+  box-shadow: none;    /* nema bootstrap plavog */
+}
+
+/* hover efekat */
+.accordion-button:hover {
+  background-color: #ffd54d;
+  font-weight: 600;
+}
+
+/* kad je u focusu (kliknuto/tab) */
+.accordion-button:focus {
+  box-shadow: none;   /* ukloni plavi outline */
+  background-color: #ffd54d;
+  font-weight: 600;
+}
+
+
+
+/* Kad ekran postane "mobilan" (recimo < 768px), sakrij desktop i prikaži mobilni */
 @media (max-width: 768px) {
-  .footer-section {
-    border-top: 1px solid rgba(0,0,0,0.1);
-    padding: 10px 0;
-  }
-
-  .footer-title {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-list {
+  .pc-container {
     display: none;
-    margin-top: 10px;
   }
 
-  .footer-list.open {
+  .mobile-container {
     display: block;
   }
 }

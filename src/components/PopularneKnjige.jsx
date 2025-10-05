@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import "./PopularneKnjige.css";
+import KnjigaPrecica from "./knjigaPrecica";
 
 import knjiga1 from "../assets/knjige/alisa_u_zemlji_cuda-luis_kerol_v.png";
 import knjiga2 from "../assets/knjige/braca_karamazovi_i-fjodor_mihailovic_dostojevski_v.jpg";
@@ -8,57 +9,57 @@ import knjiga4 from "../assets/knjige/zapisi_iz_mrtvog_doma-fjodor_mihailovic_do
 import knjiga5 from "../assets/knjige/zli_dusi_i-fjodor_mihailovic_dostojevski_v.jpg";
 import knjiga6 from "../assets/knjige/decaci_pavlove_ulice-ferenc_molnar_v.png";
 import knjiga7 from "../assets/knjige/zivotinjska_farma-dzordz_orvel_v.jpg";
+import knjiga8 from "../assets/knjige/zov_divljine-dzek_london_v.jpg";
+import knjiga9 from "../assets/knjige/izgubljene_iluzije-onore_de_balzak_v.png";
+import knjiga10 from "../assets/knjige/jadnici_-_i_tom-viktor_igo_v.png";
 
-const knjige = [knjiga1, knjiga2, knjiga3, knjiga4, knjiga5, knjiga6, knjiga7];
+function PopularneKnjige() {
+  const slike = [
+    knjiga1, knjiga2, knjiga3, knjiga4, knjiga5,
+    knjiga6, knjiga7, knjiga8, knjiga9, knjiga10
+  ];
 
-function PopularneKnjige({naslov}) {
   const [startIndex, setStartIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(5); // default za velike ekrane
-  const total = knjige.length;
+  const visibleCount = 8;
 
-  // Responsivni broj vidljivih knjiga
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 576) {
-        setVisibleCount(1); // mobilni ekran -> 1 knjiga
-      } else {
-        setVisibleCount(5); // veći ekrani -> 5 knjiga
-      }
-    };
-    handleResize(); // inicijalno
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const prev = () => {
+    setStartIndex((prev) =>
+      prev === 0 ? slike.length - visibleCount : prev - 1
+    );
+  };
 
-  const next = () => setStartIndex((startIndex + 1) % total);
-  const prev = () => setStartIndex((startIndex - 1 + total) % total);
+  const next = () => {
+    setStartIndex((prev) =>
+      prev + visibleCount >= slike.length ? 0 : prev + 1
+    );
+  };
 
-  // Pripremamo vidljive knjige sa wrap-around logikom
-  const visibleKnjige = [];
+  const displayed = [];
   for (let i = 0; i < visibleCount; i++) {
-    visibleKnjige.push(knjige[(startIndex + i) % total]);
+    displayed.push(slike[(startIndex + i) % slike.length]);
   }
 
   return (
-    <div className="main-container">
-      <h1 className="popularni-naslov">{naslov}</h1>
-
-      <div className="carousel-wrapper">
-        <button onClick={prev} className="carousel-btn left">&#10094;</button>
-
-        <div className="carousel-inner" style={{ width: `${visibleCount * 220}px` }}>
-          {visibleKnjige.map((knjiga, index) => (
-            <img
-              key={index}
-              src={knjiga}
-              alt={`Knjiga ${index}`}
-              className="carousel-img"
-            />
-          ))}
-        </div>
-
-        <button onClick={next} className="carousel-btn right">&#10095;</button>
+    <div className="carousel-wrapper">
+      {/* Strelica levo */}
+      <div className="arrow left" onClick={prev}>
+        &#8249;
       </div>
+
+      {/* Carousel */}
+      <div className="carousel-loop">
+        {displayed.map((src, idx) => (
+          <KnjigaPrecica key={idx} src={src} />
+        ))}
+      </div>
+
+      {/* Strelica desno */}
+      <div className="arrow right" onClick={next}>
+        &#8250;
+      </div>
+
+      {/* Pozadinski container */}
+      <div className="carousel-container"></div>
     </div>
   );
 }
