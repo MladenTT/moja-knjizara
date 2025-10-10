@@ -14,11 +14,11 @@ function App() {
             <div className="my-texture"></div>
             <Routes>
               <Route path="*" element={<Pocetna />} /> {/* fallback za sve rute */}
-              <Route path='/moja-knjizara/' element = { <Pocetna/> }></Route>
-              <Route path='/moja-knjizara/pocetna' element = { <Pocetna/> }></Route>
-              <Route path='/moja-knjizara/horor' element = { <Stranica/> }></Route>
-              <Route path='/moja-knjizara/book' element = { <Book/>}></Route>
-              <Route path='/moja-knjizara/novi-artikal' element = { <NoviArtikal/>}></Route>
+              <Route path='/' element = { <Pocetna/> }></Route>
+              <Route path='/pocetna' element = { <Pocetna/> }></Route>
+              <Route path='/horor' element = { <Stranica/> }></Route>
+              <Route path='/book' element = { <Book/>}></Route>
+              <Route path='/novi-artikal' element = { <NoviArtikal/>}></Route>
             </Routes>
           </BrowserRouter>
       </>
