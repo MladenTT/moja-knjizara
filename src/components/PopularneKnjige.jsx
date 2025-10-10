@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./PopularneKnjige.css";
+import KnjigaPrecica from "./KnjigaPrecica";
 
 import knjiga1 from "../assets/knjige/alisa_u_zemlji_cuda-luis_kerol_v.png";
 import knjiga2 from "../assets/knjige/braca_karamazovi_i-fjodor_mihailovic_dostojevski_v.jpg";
