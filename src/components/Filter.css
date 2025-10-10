@@ -81,3 +81,8 @@ h4 {
     box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.5); /* narandžasti fokus */
     border-color: orange; /* opcionalno da i ivica bude narandžasta */
 }
+
+@media (max-width: 768px) {
+    .filter-conteiner {
+    }
+}

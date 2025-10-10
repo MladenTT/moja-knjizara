@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./PopularneKnjige.css";
-import KnjigaPrecica from "./knjigaPrecica";
 
 import knjiga1 from "../assets/knjige/alisa_u_zemlji_cuda-luis_kerol_v.png";
 import knjiga2 from "../assets/knjige/braca_karamazovi_i-fjodor_mihailovic_dostojevski_v.jpg";
@@ -39,8 +38,30 @@ function PopularneKnjige() {
     displayed.push(slike[(startIndex + i) % slike.length]);
   }
 
+  // --- touch logika za mobilne ---
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handleTouchStart = (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 50) {
+      next(); // swipe levo -> sledeća
+    }
+    if (touchEndX - touchStartX > 50) {
+      prev(); // swipe desno -> prethodna
+    }
+  };
+
   return (
-    <div className="carousel-wrapper">
+    <div
+      className="carousel-wrapper"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Strelica levo */}
       <div className="arrow left" onClick={prev}>
         &#8249;

@@ -85,14 +85,14 @@ function Book() {
                             <br />
                         </div>
                         <div className="data-action row g-3">
-                            <div className="data-amount-wraper col-12 col-lg-4">
+                            <div className="data-amount-wraper col-12 col-md-4">
                                 <div className="btn-group" role="group" aria-label="Basic outlined example">
                                     <button type="button" className="btn btn-outline-warning">-</button>
                                     <input type="text" name="amount" value={1}/>
                                     <button type="button" className="btn btn-outline-warning">+</button>
                                 </div>
                             </div>
-                            <div className="data-cart col-12 col-lg-4">
+                            <div className="data-cart col-12 col-md-4">
                                 <button type="button" className="btn btn-success">
                                     Dodaj u korpu
                                     <svg
@@ -108,7 +108,7 @@ function Book() {
                                 </button>
                             </div>
 
-                            <div className="data-cart col-12 col-lg-4">
+                            <div className="data-cart col-12 col-md-4">
                                 <button type="button" className="btn btn-outline-success">
                                     Dodaj u omiljene
                                     <svg

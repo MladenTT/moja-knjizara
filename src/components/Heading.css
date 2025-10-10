@@ -1,4 +1,5 @@
 .heading-container {
+    width: 100%;
     padding-left: 200px;
     padding-right: 200px;
     padding-top: 50px;
@@ -9,9 +10,11 @@
 /* Za manje ekrane */
 @media (max-width: 768px) {
     .heading-container {
+        width: 100%;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 5px;
         padding-bottom: 5px;
+        margin: 0 auto;
     }
 }

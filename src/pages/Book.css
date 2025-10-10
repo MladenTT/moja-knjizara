@@ -1,8 +1,8 @@
 .book-container {
-    padding-top: 150px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -11,40 +11,52 @@
   max-width: 1300px;       
   margin: 0 auto;             
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
   box-sizing: border-box;
 }
 
 
 .lower-container {
-    display: flex;
-    justify-content: center;
+  max-width: 1300px; 
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-sizing: border-box;
 }
 
 .item-img {
-    background-color: white;
-    padding: 50px;
-    
+  background-color: white;
+  padding: 50px;
   display: flex;              /* aktiviraj flexbox */
-  align-items: center;        /* centriraj vertikalno */
   justify-content: center
 }
+
+.item-img img {
+  width: 250px;
+  height: 350px;     /* primer, zakucana visina */
+  object-fit: contain; /* ili cover, zavisi da li želiš da ostane cela slika ili da popuni okvir */
+}
+
 
 .item-data {
     background-color: white;
     padding: 30px;
 }
 
+.data-amount-wraper {
+  display: flex;
+  justify-content: center;   /* horizontalno */
+  align-items: center;       /* vertikalno */
+}
+
 .data-description {
     margin-top: 30px;
 }
 
-.data-amount-wraper {
-  width: fit-content;
-}
-
 .cena-wraper {
-  width: 400px;
+  max-width: 400px;
 }
 
 .maloprodajna {
@@ -64,10 +76,10 @@
 }
 
 .data-action {
-    margin: 10px;
-    width: 500px;
+    max-width: 600px;
     display: flex;
-    justify-content: space-between;
+    justify-content:start;
+    margin: 0;
 }
 
 .data-cart .btn {
@@ -76,7 +88,6 @@
   justify-content: center; /* horizontalno centriranje (ako hoćeš sve u sredini) */
   gap: 0.5rem;           /* razmak između teksta i ikone */
 }
-
 
 .btn:focus,
 .btn:active {
@@ -107,6 +118,18 @@ input:active {
     padding-bottom: 10px;
 }
 
+.accordion-button:focus {
+  box-shadow: none;   /* ukloni plavi outline */
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffd54d;
+  color: #000;
+  font-weight: 600;
+  box-shadow: none;    /* nema bootstrap plavog */
+}
+
 .item-similar {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -133,3 +156,12 @@ input:active {
   align-items: center; /* vertikalno centriranje */
 }
 
+@media (max-width: 768px) {
+  .data-amount-wraper {
+    justify-content: start; 
+  }
+  .item-img {
+    padding-top: 50px;
+    
+  }
+}

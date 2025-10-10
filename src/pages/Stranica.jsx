@@ -14,7 +14,9 @@ function Stranica() {
                     <h1>Naslov</h1>
                 </div>
                 <div className="sadrzaj">
-                    <Filter/>
+                    <div className="d-none d-md-block">
+                        <Filter/>
+                    </div>
                     <ProducPage/>
                 </div>
                 

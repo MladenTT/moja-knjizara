@@ -1,11 +1,15 @@
 .footer-container {
   width: 100%;
-  background-color: #fcb800;
   color: gray;
+  background-color: #fcb800;
 }
 
 .footer-container a {
-  color: #44444E;
+  color: #000;
+}
+
+.border-top {
+  border-color: #000;
 }
 
 h5 {
@@ -24,27 +28,19 @@ h5 {
 
 .mobile-container {
   display: none;
-  background-color: #fcb800;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.accordion {
-  background-color: #fcb800;
-}
 
-.accordion-item {
-  background-color: #fcb800;
-}
 
 /* osnovno stanje */
-.accordion-button {
-  background-color: #fcb800;   /* bela pozadina */
+#accordion-button {
   color: #000;              /* crni tekst */
 }
 
 /* kad je otvoren (ne collapsed) */
-.accordion-button:not(.collapsed) {
+#accordion-button:not(.collapsed) {
   background-color: #ffd54d;
   color: #000;
   font-weight: 600;
@@ -52,13 +48,13 @@ h5 {
 }
 
 /* hover efekat */
-.accordion-button:hover {
+#accordion-button:hover {
   background-color: #ffd54d;
   font-weight: 600;
 }
 
 /* kad je u focusu (kliknuto/tab) */
-.accordion-button:focus {
+#accordion-button:focus {
   box-shadow: none;   /* ukloni plavi outline */
   background-color: #ffd54d;
   font-weight: 600;
@@ -74,5 +70,8 @@ h5 {
 
   .mobile-container {
     display: block;
+  }
+  .footer-container  {
+    background-color: white;
   }
 }

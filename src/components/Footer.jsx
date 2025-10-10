@@ -8,7 +8,7 @@ function Footer() {
       <div className="pc-container">
         <footer className="container py-5">
           <div className="container"> 
-            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"> 
+            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top border-dark"> 
               <div className="col mb-3"> 
                 <a href="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap"> 
                   <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-journals" viewBox="0 0 16 16">
@@ -90,11 +90,11 @@ function Footer() {
 
       {/*Footer Mobilna Verzija*/}
       <div className="mobile-container">
-        <div className="accordion" id="accordionExample">
+        <div className="accordion accordion-flush" id="accordionExample">
 
-          <div className="accordion-item">
+          <div id="accordion-item" className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button id="accordion-button" className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Accordion Item #1
               </button>
             </h2>
@@ -105,9 +105,9 @@ function Footer() {
             </div>
           </div>
 
-          <div className="accordion-item">
+          <div id="accordion-item" className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button id="accordion-button" className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Accordion Item #2
               </button>
             </h2>
@@ -118,9 +118,9 @@ function Footer() {
             </div>
           </div>
 
-          <div className="accordion-item">
+          <div id="accordion-item" className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button id="accordion-button" className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Accordion Item #3
               </button>
             </h2>

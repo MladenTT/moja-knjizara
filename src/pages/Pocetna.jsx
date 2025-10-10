@@ -19,6 +19,8 @@ function Pocetna() {
         <Header/>
         <PopularneKnjige naslov="Popularne knjige"/>
         <Heading/>
+        <PopularneKnjige/>
+        <PopularneKnjige/>
         <Add/>
         <KnjigeZaDecu naslov="Knjige za decu"/>
         

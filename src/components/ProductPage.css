@@ -1,9 +1,8 @@
 .product-container {
     width: 100%;
-    height: 1000px;
     background-color: white;
     border-radius: 8px; /* za zaobljene ivice */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* blaga senka */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* blaga senka */
     
 }
 
@@ -17,7 +16,7 @@
     height: 60px; /* stavi visinu da se vidi efekat */
     padding-right: 30px;
     border-radius: 8px; /* za zaobljene ivice */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* blaga senka */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* blaga senka */
 }
 
 .sortiranje {
@@ -39,10 +38,19 @@
     gap: 20px; /* razmak između kartica */
 }
 
+ .filter-wraper .btn{
+    display: flex;
+    align-items: center;   /* vertikalno centriranje */
+    justify-content: center; /* horizontalno centriranje (ako hoćeš sve u sredini) */
+}
+
 /* srednji ekrani (tableti npr.) */
 @media (min-width: 768px) {
     .page-tools-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+     .filter-wraper {
+        display: none;
     }
 }
 
@@ -51,7 +59,36 @@
     .page-tools-list {
         grid-template-columns: repeat(5, 1fr);
     }
+     .filter-wraper {
+        display: none;
+    }
 }
 
 /*filter za mobilni*/
 
+@media (max-width: 768px) {
+    .page-tools-list {
+        padding: 10 auto;
+        width: 100%;
+    }
+
+    .page-tools {
+        gap: 2px;
+        padding-right: 7px;
+    }
+
+    .pocetni {
+        padding: 10px;
+    }
+
+    .card {
+         margin: 0 auto;
+    }
+    .pocetni {
+        padding: 0;
+    }
+    .sortiranje {
+        gap: 2px;
+    }
+   
+}
