@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>  
             <div className="my-texture"></div>
             <Routes>
-              <Route path="*" element={<Home />} /> {/* fallback za sve rute */}
+              <Route path="*" element={<Pocetna />} /> {/* fallback za sve rute */}
               <Route path='/moja-knjizara/' element = { <Pocetna/> }></Route>
               <Route path='/moja-knjizara/pocetna' element = { <Pocetna/> }></Route>
               <Route path='/moja-knjizara/horor' element = { <Stranica/> }></Route>
